@@ -1,10 +1,10 @@
 interface IButton {
   text: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  action: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const button = ({ text, onClick }: IButton) => {
-  return <button onClick={onClick}>{text}</button>;
+const button = ({ text, action }: IButton) => {
+  return <button onClick={action}>{text}</button>;
 };
 
 export default button;

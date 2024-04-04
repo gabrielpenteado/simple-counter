@@ -8,6 +8,14 @@ function App() {
     localStorage.getItem("count") ? Number(localStorage.getItem("count")) : 0
   );
 
+  const increaseCounter = () => {
+    setCount(count + 1);
+  };
+
+  const decreaseCounter = () => {
+    setCount(count - 1);
+  };
+
   useEffect(() => {
     localStorage.setItem("count", JSON.stringify(count));
   }, [count]);
@@ -17,8 +25,8 @@ function App() {
       <h1>Counter</h1>
       <span>{count}</span>
       <div className="buttons">
-        <Button text="Increase" onClick={() => setCount(count + 1)} />
-        <Button text="Decrease" onClick={() => setCount(count - 1)} />
+        <Button text="Increase" action={increaseCounter} />
+        <Button text="Decrease" action={decreaseCounter} />
       </div>
     </div>
   );
