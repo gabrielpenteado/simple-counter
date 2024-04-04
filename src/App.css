@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: azure;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.counter span {
+  align-self: center;
+  font-size: 80px;
+  padding-bottom: 10px;
+}
+
+.counter button {
+  background-color: cornflowerblue;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: medium;
+  border-color: blue;
+}
+
+.buttons {
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+}
