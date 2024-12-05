@@ -9,11 +9,11 @@ function App() {
   );
 
   const increaseCounter = () => {
-    setCount(count + 1);
+    setCount((prevState) => prevState + 1);
   };
 
   const decreaseCounter = () => {
-    setCount(count - 1);
+    setCount((prevState) => prevState - 1);
   };
 
   useEffect(() => {
